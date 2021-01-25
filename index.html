@@ -3,13 +3,21 @@
   <head>
     <meta charset="utf-8">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <title>Unity WebGL Player | New Unity Project</title>
-    <script src="Build/UnityLoader.js"></script>
-    <script>
-      UnityLoader.instantiate("unityContainer", "Build/TheHotHouse0.0.2.json");
-    </script>
+    <title>Unity WebGL Player | Trap The Cat</title>
   </head>
-  <body>
-    <div id="unityContainer" style="width: 800px; height: 600px; margin: auto"></div>
+  <body style="text-align: center">
+    <canvas id="unity-canvas" style="width: 1280px; height: 720px; background: #231F20"></canvas>
+    <script src="Build/Trap The Cat Web Gl 11 Enero.loader.js"></script>
+    <script>
+      createUnityInstance(document.querySelector("#unity-canvas"), {
+        dataUrl: "Build/Trap The Cat Web Gl 11 Enero.data.gz",
+        frameworkUrl: "Build/Trap The Cat Web Gl 11 Enero.framework.js.gz",
+        codeUrl: "Build/Trap The Cat Web Gl 11 Enero.wasm.gz",
+        streamingAssetsUrl: "StreamingAssets",
+        companyName: "ProjectPhysalis",
+        productName: "Trap The Cat",
+        productVersion: "0.1",
+      });
+    </script>
   </body>
 </html>
